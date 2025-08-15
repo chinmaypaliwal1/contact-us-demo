@@ -40,29 +40,9 @@
             }
         }
     </script>
-    <style>
-
-  .scroll-appear {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  
-  .scroll-appear.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Delay classes for sequential animation */
-  .delay-100 { transition-delay: 100ms; }
-  .delay-200 { transition-delay: 200ms; }
-  .delay-300 { transition-delay: 300ms; }
-  .delay-400 { transition-delay: 400ms; }
-</style>
-
 </head>
 <body>
-    <div class="max-h-full">
+    <div class="min-h-screen">
         <!-- Navigation Bar -->
         <nav class="fixed top-0 left-0 right-0 z-50 bg-[#355601] border-b border-border">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,7 +142,8 @@
         </nav>
 
         <!-- Hero Section -->
-        <section class="my-59 relative hero-section opacity-0 transition-opacity duration-1000 ease-in">            <!-- Dark green header bar -->
+        <section class="relative">
+            <!-- Dark green header bar -->
             <div class="bg-[#355601] h-16"></div>
             
             <!-- Main content with diagonal split -->
@@ -204,7 +185,7 @@
         </section>
 
         <!-- We Are Ready To Help - Sticky Header -->
-        <div class="sticky top-16 z-40 bg-background py-6 animate-on-scroll">
+        <div class="sticky top-16 z-40 bg-background py-6">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <div class="relative inline-block">
                     <h2 class="text-4xl md:text-5xl font-bold text-[#355601] mb-4">We Are Ready To Help</h2>
@@ -217,7 +198,7 @@
         </div>
 
         <!-- Contact Information Cards -->
-        <section class="py-16 bg-background animate-on-scroll">
+        <section class="py-16 bg-background">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Phone Call -->
@@ -290,7 +271,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-background animate-on-scroll">
+        <section id="contact" class="py-20 bg-background">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <div class="space-y-28">
@@ -305,7 +286,7 @@
                                 <span class="text-[#ffb642]">together</span>
                             </h2>
                         </div>
-                        <div class="animate-on-scroll">
+                        <div class="lg:col-span-3  group/map relative">
                             <iframe 
                               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.123456789012!2d77.12345678901234!3d12.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA3JzI0LjQiTiA3N8KwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
                               width="500px" 
@@ -340,7 +321,7 @@
                                         type="text"
                                         id="firstName"
                                         name="firstName"
-                                        class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
+                                        class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#355601] focus:border-[#355601] transition-colors duration-200"
                                         placeholder=""
                                     />
                                 </div>
@@ -352,12 +333,12 @@
                                         type="text"
                                         id="lastName"
                                         name="lastName"
-                                        class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
+                                        class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#355601] focus:border-[#355601] transition-colors duration-200"
                                         placeholder=""
                                     />
                                 </div>
                             </div>
-
+                    
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-card-foreground mb-2">
@@ -367,7 +348,7 @@
                                         type="email"
                                         id="email"
                                         name="email"
-                                        class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
+                                        class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#355601] focus:border-[#355601] transition-colors duration-200"
                                         placeholder=""
                                     />
                                 </div>
@@ -379,12 +360,12 @@
                                         type="tel"
                                         id="phone"
                                         name="phone"
-                                        class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
+                                        class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#355601] focus:border-[#355601] transition-colors duration-200"
                                         placeholder=""
                                     />
                                 </div>
                             </div>
-
+                    
                             <div>
                                 <label for="message" class="block text-sm font-medium text-card-foreground mb-2">
                                     Message
@@ -393,11 +374,11 @@
                                     id="message"
                                     name="message"
                                     rows="6"
-                                    class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200 resize-none"
+                                    class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#355601] focus:border-[#355601] transition-colors duration-200 resize-none"
                                     placeholder=""
                                 ></textarea>
                             </div>
-
+                    
                             <div>
                                 <label for="country" class="block text-sm font-medium text-card-foreground mb-2">
                                     Country<span class="text-red-500">*</span>
@@ -405,7 +386,7 @@
                                 <select
                                     id="country"
                                     name="country"
-                                    class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-colors duration-200"
+                                    class="w-full px-4 py-3 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#355601] focus:border-[#355601] transition-colors duration-200"
                                 >
                                     <option value="">Select a country</option>
                                     <option value="us">United States</option>
@@ -417,10 +398,10 @@
                                     <option value="other">Other</option>
                                 </select>
                             </div>
-
+                    
                             <button
                                 type="submit"
-                                class="w-full bg-[#355601] text-white py-4 px-6 rounded-lg font-medium hover:bg-[#355601] transition-colors duration-200 focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                class="w-full bg-[#355601] text-white py-4 px-6 rounded-lg font-medium hover:bg-[#355601] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#355601] focus:ring-offset-2"
                             >
                                 Submit
                             </button>
@@ -519,44 +500,5 @@
             </div>
           </footer>
     </div>
-    <script>
-        // Animation classes
-        const fadeInUp = {
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 }
-        };
-      
-
-        document.addEventListener('DOMContentLoaded', () => {
-    const appearElements = document.querySelectorAll('.scroll-appear');
-    
-    const appearObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
-
-    appearElements.forEach(el => {
-      appearObserver.observe(el);
-    });
-
-    // Hero section special animation
-    const hero = document.querySelector('.hero-section');
-    if (hero) {
-      hero.classList.add('opacity-0');
-      setTimeout(() => {
-        hero.classList.add('transition-opacity', 'duration-1000');
-        hero.classList.remove('opacity-0');
-      }, 300);
-    }
-  });
-
-      </script>
 </body>
-</html> 
-              <!--Html-->
+</html>
